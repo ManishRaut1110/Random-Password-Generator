@@ -7,7 +7,7 @@ This code basically generates a password randomly using the follwing:
 - Special Characters\
   It is recommended to generate minimum 12 words long password to include all the above
 
-For front-end, the code uses   	`stramlit`.  \
+For front-end, the code uses   	`stramlit`.
 
-To run: 
+To run: \
 `streamlit run pwd-gen.py`
