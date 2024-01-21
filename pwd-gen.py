@@ -1,11 +1,10 @@
 import random
 from time import sleep
 import streamlit as st
-import pandas as pd
+
 
 chooseCase = 0
 finalPassword = ''
-progressStatus = 0
 
 lowerCase   = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
 upperCase   = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
@@ -34,23 +33,20 @@ sidebarChoice = st.sidebar.radio(
     "",["Generate","Your Passwords"]
 )
     
-if sidebarChoice=='Generate':
-    try:
-        st.title("Password Generator")
-        digit = st.text_input("Enter the number of digits for Password: ")
+try:
+    st.title("Password Generator")
+    digit = st.text_input("Enter the number of digits for Password: ")
         
-        finalPassword = genPassword(digit)
+    finalPassword = genPassword(digit)
+    sleep(0.5)
+    st.code(finalPassword,language='none')
+
+    if st.button('Refresh'):
         sleep(0.5)
-        st.code(finalPassword,language='none')
-
-        if st.button('Refresh'):
-            sleep(0.5)
-            pass
-
-        
-
-    except:
         pass
+
+except:
+    pass
 
     
 
